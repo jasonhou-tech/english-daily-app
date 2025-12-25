@@ -70,7 +70,7 @@ export default function SetupForm({ onComplete }: SetupFormProps) {
                         <button
                             type="submit"
                             disabled={!goal.trim()}
-                            className="absolute right-2 top-2 bottom-2 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-sm transition-all active:scale-95 disabled:opacity-0 disabled:pointer-events-none"
+                            className="absolute right-2 top-2 bottom-2 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-sm transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Start
                         </button>
