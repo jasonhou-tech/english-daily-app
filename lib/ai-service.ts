@@ -22,10 +22,12 @@ export async function generateDailyContent(goal: string): Promise<DailyContent> 
   await new Promise((resolve) => setTimeout(resolve, 600));
 
   // 1. Check for Static Content Match
-  // We match against Course Name or ID
+  // We match against Course Name, ID, or Keywords
+  const normalizedGoal = goal.toLowerCase().trim();
   const staticCourse = FEATURED_COURSES.find(c =>
-    c.name.toLowerCase() === goal.toLowerCase() ||
-    c.id === goal
+    c.name.toLowerCase() === normalizedGoal ||
+    c.id === normalizedGoal ||
+    (c.matchKeywords && c.matchKeywords.some(k => normalizedGoal.includes(k.toLowerCase())))
   );
 
   if (staticCourse) {

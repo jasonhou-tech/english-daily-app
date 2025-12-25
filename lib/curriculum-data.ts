@@ -6,6 +6,7 @@ export interface StaticCourse {
     name: string;
     description: string;
     color: string;
+    matchKeywords?: string[];
     content: DailyContent;
 }
 
@@ -15,6 +16,7 @@ export const FEATURED_COURSES: StaticCourse[] = [
         name: "Survival English",
         description: "Essential phrases for everyday life.",
         color: "bg-emerald-500",
+        matchKeywords: ["survival", "basic", "beginner", "生活", "基础", "生存"],
         content: {
             id: "static-survival-01",
             date: new Date().toLocaleDateString(),
@@ -102,6 +104,7 @@ export const FEATURED_COURSES: StaticCourse[] = [
         name: "Travel 101",
         description: "Airport, hotel, and navigation basics.",
         color: "bg-blue-500",
+        matchKeywords: ["travel", "trip", "airport", "flight", "hotel", "旅游", "旅行", "机场", "酒店", "飞机"],
         content: {
             id: "static-travel-01",
             date: new Date().toLocaleDateString(),
