@@ -8,8 +8,13 @@ interface DailyCardProps {
 
 export default function DailyCard({ phrase, index }: DailyCardProps) {
     const handlePlay = () => {
-        // Placeholder for audio play
-        alert(`Playing audio for: ${phrase.english}`);
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(phrase.english);
+            utterance.lang = 'en-US';
+            window.speechSynthesis.speak(utterance);
+        } else {
+            console.warn("Text-to-speech not supported in this browser.");
+        }
     };
 
     return (
