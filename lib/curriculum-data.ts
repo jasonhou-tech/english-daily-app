@@ -23,25 +23,40 @@ export const FEATURED_COURSES: StaticCourse[] = [
                     english: "Could you speak a little slower, please?",
                     chinese: "您可以说慢一点吗？",
                     imageUrl: "https://placehold.co/600x400/10b981/ffffff?text=Slow+Please",
-                    audioUrl: ""
+                    audioUrl: "",
+                    keywords: [
+                        { word: "speak", phonetic: "/spiːk/" },
+                        { word: "slower", phonetic: "/ˈsləʊ.ə/" }
+                    ]
                 },
                 {
                     english: "I am sorry, I don't understand.",
                     chinese: "对不起，我听不懂。",
                     imageUrl: "https://placehold.co/600x400/10b981/ffffff?text=Dont+Understand",
-                    audioUrl: ""
+                    audioUrl: "",
+                    keywords: [
+                        { word: "sorry", phonetic: "/ˈsɒr.i/" },
+                        { word: "understand", phonetic: "/ˌʌn.dəˈstænd/" }
+                    ]
                 },
                 {
                     english: "Where is the nearest restroom?",
                     chinese: "最近的洗手间在哪里？",
                     imageUrl: "https://placehold.co/600x400/10b981/ffffff?text=Restroom",
-                    audioUrl: ""
+                    audioUrl: "",
+                    keywords: [
+                        { word: "nearest", phonetic: "/ˈnɪə.rɪst/" },
+                        { word: "restroom", phonetic: "/ˈrest.ruːm/" }
+                    ]
                 },
                 {
                     english: "How much does this cost?",
                     chinese: "这个多少钱？",
                     imageUrl: "https://placehold.co/600x400/10b981/ffffff?text=How+Much",
-                    audioUrl: ""
+                    audioUrl: "",
+                    keywords: [
+                        { word: "cost", phonetic: "/kɒst/" }
+                    ]
                 },
                 {
                     english: "Can I pay by credit card?",

@@ -5,6 +5,10 @@ export interface Phrase {
   chinese: string;
   imageUrl: string;
   audioUrl: string;
+  keywords?: {
+    word: string;
+    phonetic: string;
+  }[];
 }
 
 export interface DailyContent {
@@ -37,7 +41,11 @@ export async function generateDailyContent(goal: string): Promise<DailyContent> 
       chinese: `这是关于"${goal}"的模拟短语 ${i + 1}`,
       // Use a placeholder image service that generates distinct images
       imageUrl: `https://placehold.co/600x400?text=${encodeURIComponent(`Image ${i + 1}`)}`,
-      audioUrl: "", // No audio for mock yet
+      audioUrl: "",
+      keywords: [
+        { word: "mock", phonetic: "/mɒk/" },
+        { word: "phrase", phonetic: "/freɪz/" }
+      ]
     })),
   };
 }

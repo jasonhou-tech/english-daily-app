@@ -50,6 +50,20 @@ export default function DailyCard({ phrase, index }: DailyCardProps) {
                         {phrase.chinese}
                     </p>
                 </div>
+
+                {phrase.keywords && phrase.keywords.length > 0 && (
+                    <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Key Vocabulary</p>
+                        <div className="flex flex-wrap gap-3">
+                            {phrase.keywords.map((kw, i) => (
+                                <div key={i} className="flex items-center gap-2 text-sm bg-slate-50 dark:bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-100 dark:border-slate-800">
+                                    <span className="font-medium text-slate-700 dark:text-slate-300">{kw.word}</span>
+                                    <span className="font-mono text-indigo-500 text-xs opacity-80">{kw.phonetic}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
